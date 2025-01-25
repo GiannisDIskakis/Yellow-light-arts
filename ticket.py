@@ -1,9 +1,10 @@
+import os
 import random
 import string
 import webbrowser
 import yagmail
 import sqlite3
-
+from dotenv import load_dotenv
 from fpdf import FPDF
 
 from Event_informations.event import Events
@@ -105,9 +106,10 @@ class Ticket:
                 "Email] or visit our FAQ [Link to FAQ].\n"
                 "Thank you for choosing Yellow Light. Get ready for a night to remember!\n\n"
                 "See you soon,The Yellow Light Arts Team[www.yellowlight.com]")
-
+        load_dotenv()
+        password = os.getenv("email_password")
         email = yagmail.SMTP(user="pythonwebmailapp@gmail.com",
-                             password="wwhiqtslpiwhqhtn")
+                             password=password)
 
         email.send(to=self.email,
                    subject="Get Ready for an Unforgettable Night at Yellow Light Arts!\n"
