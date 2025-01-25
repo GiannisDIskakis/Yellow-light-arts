@@ -1,0 +1,73 @@
+{% extends "material/base.html " %}
+{% block content %}
+<nav class="red lighten-3">
+    <div class = "nav-wrapper">
+        <a href="">Yellow Light ARTS</a>
+        <ul id="nav-mobile" class="right hide-on-med-down">
+            <li><a href={{url_for('home')}}>HOME</a></li>
+            <li><a href={{url_for('about')}}>ABOUT</a></li>
+            <li><a href={{url_for('upcoming')}}>UPCOMING EVENTS</a></li>
+            <li><a href={{url_for('vote')}}>VOTE</a></li>
+            <li><a href={{url_for('user')}}>CREATE PROFILE</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<h3>About Yellow Light ARTS</h3>
+   <div class="row">
+      <div class="col s12 flow-text">Where Music Meets Excellence
+
+          <p class="flow-text">Welcome to Yellow Light Arts, a premier destination for unforgettable live performances.
+          Located in the heart of Athens, our concert hall is more than just a venue—it’s a cultural landmark where music, artistry,
+          and community come together.</p>
+
+
+      </div>
+
+
+      <div class="col s6">
+          <br>
+          <br>
+          <br>
+          <br>
+        <h5>Our Story</h5>
+        <p class="flow-text">Founded in April 2011, Yellow Light Arts was built with a vision to create a space where music
+            lovers of all kinds could experience the joy of live performances.
+            Over the years, we’ve hosted world-class artists, rising stars,
+            and inspiring community events, making us a cornerstone of the local arts scene.</p>
+      </div>
+      <div class="col s6 offset-s6">
+         <h5>Our Venue</h5>
+         <p class="flow-text">Designed with impeccable acoustics and elegant architecture,
+             Yellow Light Arts offers an unmatched experience for audiences and performers alike.</p>
+
+      </div>
+
+      <div class="col s6">
+         <h5>Our Mission</h5>
+         <p class="flow-text">At Yellow Light ARTS, our mission is to inspire, connect,
+             and uplift through the power of music. We’re dedicated to:
+             showcasing diverse genres and talents, supporting local and international artists and
+             creating memorable experiences for every guest.</p>
+
+      </div>
+
+      <div class="col s6 offset-s6">
+         <h5>Join the Experience</h5>
+         <p class="flow-text">From timeless classics to contemporary hits,
+             our events cater to every musical taste. Whether you’re here for a symphony, a rock concert,
+             or a community celebration,
+             we promise an experience that stays with you long after the final note.</p>
+
+      </div>
+
+
+
+
+
+   </div>
+{% endblock %}

@@ -1,0 +1,136 @@
+{% extends "material/base.html " %}
+{% block content %}
+<nav class="red lighten-3">
+    <div class = "nav-wrapper">
+        <a href="">Yellow Light ARTS</a>
+        <ul id="nav-mobile" class="right hide-on-med-down">
+            <li><a href={{url_for('home')}}>HOME</a></li>
+            <li><a href={{url_for('about')}}>ABOUT</a></li>
+            <li><a href={{url_for('upcoming')}}>UPCOMING EVENTS</a></li>
+            <li><a href={{url_for('vote')}}>VOTE</a></li>
+            <li><a href={{url_for('user')}}>CREATE PROFILE</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+<h3>Help Shape the Future of Events at Yellow Light Arts Concert Hall!</h3>
+<br>
+{% if result == True  %}
+    <div class="card-panel">
+    <span class="lime-text text-darken-1 flow-text">{{message}}</span>
+  </div>
+{% endif %}
+<br>
+
+
+<div class="row">
+    <div class="col s12">
+
+        <p class="flow-text">We at Yellow Light Arts believe that the best events are the ones YOU want to see!
+            That’s why we’re inviting our cherished clients and community members to help us decide what’s next on our stage.</p>
+        <br>
+        <p class="flow-text">We’re planning our upcoming calendar of events, and we want to know what you’d love to attend!</p>
+
+        <p class="flow-text">    your voice matters.</p>
+        <br>
+        <p class="flow-text">Thank you for being part of our journey to make
+            Yellow Light Arts Concert Hall the vibrant cultural hub you deserve.
+            Let’s create unforgettable moments together!</p>
+
+        <br>
+        <p class="flow-text">To participate, you’ll need to create a profile.
+            It’s quick and easy, and your profile ensures that your vote is secure and fair.</p>
+        <p class="flow-text">You have one vote !!Spend it!!</p>
+    </div>
+</div>
+
+
+
+<br>
+<hr>
+<p class="flow-text">Sign in with your email and password, and let the voting begin!</p>
+<form action="/vote" method="post">
+    <div class="row">
+
+
+        <div class="input-field col s3">
+            {{sign_inform.password.label}} {{sign_inform.password}}
+        </div>
+
+
+        <div class="input-field col s3">
+            {{sign_inform.email.label}} {{sign_inform.email}}
+        </div>
+
+
+
+    </div>
+    <hr>
+   <div class="row">
+    <div class="col s12 m6">
+      <div class="card ">
+        <div class="card-image">
+          <img src="/static/Masego.jpeg">
+          <span class="card-title">Masego Votes:{{votes_masego}} </span>
+            <button class="btn-large waves-effect waves-light right red light" type="submit" name="action" value="add_masego">
+                <i class="material-icons">
+            + Vote
+                </i>
+        </button>
+        </div>
+        <div class="card-content">
+          <p>{{info_masego}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="row">
+    <div class="col s12 m6 right">
+      <div class="card ">
+        <div class="card-image">
+          <img src="/static/Bruno_Mars.jpeg">
+          <span class="card-title">Bruno Mars Votes: {{votes_bruno}}</span>
+            <button class="btn-large waves-effect waves-light right red light" type="submit" name="action" value="add_bruno">
+                <i class="material-icons">
+            + Vote
+                </i>
+        </button>
+        </div>
+        <div class="card-content">
+          <p>{{info_bruno}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+ <div class="row">
+    <div class="col s12 m6 ">
+      <div class="card  ">
+        <div class="card-image">
+          <img src="/static/Alfa_Mist.jpeg">
+          <span class="card-title">Alfa Mist Votes:{{votes_alfa}} </span>
+            <button class="btn-large waves-effect waves-light right red light" type="submit" name="action" value="add_alfa">
+                <i class="material-icons">
+            + Vote
+                </i>
+            </button>
+
+        </div>
+        <div class="card-content">
+          <p>{{info_alfa}}</p>
+        </div>
+      </div>
+    </div>
+ </div>
+</form>
+
+
+{% endblock %}

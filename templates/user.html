@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/user.css">
+</head>
+<body>
+
+{% extends "material/base.html " %}
+{% block content %}
+<nav class="red lighten-3">
+    <div class="nav-wrapper">
+        <a href="">Yellow Light ARTS</a>
+        <ul id="nav-mobile" class="right hide-on-med-down">
+            <li><a href={{url_for('home')}}>HOME</a></li>
+            <li><a href={{url_for('about')}}>ABOUT</a></li>
+            <li><a href={{url_for('upcoming')}}>UPCOMING EVENTS</a></li>
+            <li><a href={{url_for('vote')}}>VOTE</a></li>
+            <li><a href={{url_for('user')}}>CREATE PROFILE</a></li>
+        </ul>
+    </div>
+</nav>
+<h3 class="center align">Create your Profile</h3>
+
+{% if result == True %}
+<div class="card-panel">
+    <span class="lime-text text-darken-1 flow-text">{{message}}</span>
+</div>
+{% endif %}
+<div class="row">
+    <p class="flow-text col s6">Join us today and unlock all the features!It’s quick, easy, and secure. Once your
+        profile is created,
+        you’ll be ready to participate and make the most of your experience. </p>
+
+</div>
+<hr>
+<div class="row">
+    <p class="flow-text col s6">Just fill in the details below:</p>
+</div>
+
+<form action="/user" method="post">
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s3">
+                    {{signupform.name.label}} {{signupform.name}}
+                </div>
+                <div class="input-field col s3">
+                    {{signupform.surname.label}} {{signupform.surname}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    {{signupform.password.label}} {{signupform.password}}
+                </div>
+                <div class="input-field col s6">
+                    {{signupform.confirm_password.label}} {{signupform.confirm_password}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    {{signupform.email.label}} {{signupform.email}}
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+    </div>
+</form>
+
+
+{% endblock %}
+</body>
+</html>

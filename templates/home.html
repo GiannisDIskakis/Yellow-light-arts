@@ -1,0 +1,73 @@
+
+{% extends "material/base.html " %}
+{% block content %}
+<nav class="red lighten-3">
+    <div class = "nav-wrapper">
+        <a href="">Yellow Light ARTS</a>
+        <ul id="nav-mobile" class="right hide-on-med-down">
+            <li><a href={{url_for('home')}}>HOME</a></li>
+            <li><a href={{url_for('about')}}>ABOUT</a></li>
+            <li><a href={{url_for('upcoming')}}>UPCOMING EVENTS</a></li>
+            <li><a href={{url_for('vote')}}>VOTE</a></li>
+            <li><a href={{url_for('user')}}>CREATE PROFILE</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+<h3> Welcome to Yellow Light ARTS </h3>
+<p class="flow-text">Where Music Comes to Life</p>
+<hr>
+<p class="flow-text"> Step into a world of rhythm, harmony,
+    and unforgettable experiences. At Yellow Light ARTS, we celebrate the magic of live performances,
+    offering a stage for world-class artists, emerging talents, and cherished community events.</p>
+<br>
+<br>
+ <div class="row">
+    <div class="col s12 m6">
+      <div class="card red lighten-3 ">
+        <div class="card-content white-text">
+          <span class="card-title">EVENTS</span>
+          <p>Discover an exciting lineup of concerts,
+              from symphonies and jazz nights to electrifying rock shows and intimate acoustic sessions.
+              There’s something for every music lover to enjoy.</p>
+        </div>
+        <div class="card-action">
+          <a href={{url_for('upcoming')}} class="grey-text text-darken-3">UPCOMING EVENTS</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<hr>
+<p class="flow-text">Nestled in the heart of Athens, our state-of-the-art concert hall features exceptional acoustics,
+    elegant design, and a warm, welcoming atmosphere.
+    Whether you're here for a solo performance or a full orchestra,
+    every seat is the best seat in the house.</p>
+
+<br>
+<br>
+
+ <div class="row">
+    <div class="col s12 m6">
+      <div class="card red lighten-3 ">
+        <div class="card-content white-text">
+          <span class="card-title">Your voice, Your Choice!</span>
+          <p>At Yellow Light ARTS, we believe the best shows are the ones you want to see.
+              That’s why we’re inviting you to help shape our next big event!</p>
+        </div>
+        <div class="card-action">
+          <a href={{url_for('vote')}} class="grey-text text-darken-3">VOTE</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "material/base.html " %}
+{% block content %}
+<nav class="red lighten-3">
+    <div class = "nav-wrapper">
+        <a href="">Yellow Light ARTS</a>
+        <ul id="nav-mobile" class="right hide-on-med-down">
+            <li><a href={{url_for('home')}}>HOME</a></li>
+            <li><a href={{url_for('about')}}>ABOUT</a></li>
+            <li><a href={{url_for('upcoming')}}>UPCOMING EVENTS</a></li>
+            <li><a href={{url_for('vote')}}>VOTE</a></li>
+            <li><a href={{url_for('user')}}>CREATE PROFILE</a></li>
+
+
+        </ul>
+    </div>
+</nav>
+
+<h3>Upcoming Events</h3>
+<p class="flow-text">Get ready for an unforgettable lineup of events at Yellow Light Arts, where music, art, and culture come to life! </p>
+
+ <div class="row">
+    <div class="col s12 m6">
+      <div class="card ">
+        <div class="card-image">
+          <img src="/static/Bill_Frisell.jpeg">
+          <span class="card-title">Bill Frisell  14-03-2025 9pm </span>
+          <a href={{url_for('bfticket')}} class="btn-large waves-effect waves-light red right"><i class="material-icons">Book</i></a>
+        </div>
+        <div class="card-content">
+          <p>{{infob}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="row">
+    <div class="col s12 m6 right">
+      <div class="card ">
+        <div class="card-image">
+          <img src="/static/Cinematic_Orchestra.jpeg">
+          <span class="card-title">Cinematic Orchestra 27-02-2025 9pm </span>
+          <a href={{url_for('coticket')}} class="btn-large waves-effect waves-light red right"><i class="material-icons">Book</i></a>
+        </div>
+        <div class="card-content">
+          <p>{{infoc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
