@@ -1,7 +1,7 @@
 # Yellow Light Arts
 
-Yellow Light Arts is a fictional web page for a concert hall called Yellow Light Arts.
-It provides a seamless experience for users to explore concerts, 
+Yellow Light Arts is a web page for a fictional concert hall called "Yellow Light Arts".
+It provides a seamless experience for users to discover available and planned concerts, 
 book tickets, and stay updated on events. 
 The platform integrates powerful features to enhance user engagement and
 manage concert-related activities efficiently.
@@ -33,7 +33,7 @@ manage concert-related activities efficiently.
 
 5. Event Voting:
 
-     * Users with profiles can vote for events to show their interest and engagement.
+     * Users with profiles can vote for future events to show their interest and engagement.
 
 ## Getting Started
 
