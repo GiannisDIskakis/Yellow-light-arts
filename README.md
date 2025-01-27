@@ -35,12 +35,9 @@ manage concert-related activities efficiently.
 
      * Users with profiles can vote for future events to show their interest and engagement.
 
-## Getting Started
 
-### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+
 
 ## Installing
 
@@ -48,28 +45,36 @@ manage concert-related activities efficiently.
    * Python 3.9 or later.
    * Required libraries (install using the requirements.txt file).
    * SQLite 3
+   * Spotify ApiKey 
+   * Last Fm ApiKey
 
 ### Steps
 
-1. Clone repository:
-*  https://github.com/GiannisDIskakis/Yellow-Lights-Arts.git
-2. Navigate to the project directory:
-3. Install dependencies:
-4. Set up the SQLite database:
-5. Run the development server:
+
+
+
+1. Set up the SQLite database
+2. Get your Api Keys to use them in ticket.py
+   * Spotify Api Key is not necessary to run the app
+     in a local server.Its use is to find photos for 
+     creating new events.
+   * Last Fm Api Key in necessary because it is used 
+     to display artist bio to every event.
+3. Use your email or a sample email in Ticket.py and method send_ticket().
+   Use/create your app password that google provides you.
+4. Run the web_main.py and go to development server 
+   http://127.0.0.1:5000 to explore the app.
+
 ### Executing program
 
 1. Creating a Profile:
-* Visit the homepage and sign up to create a user profile.
+* Visit the homepage and About page to get info's for concert hall.
 2. Exploring Artists:
 * Search for artists to view their bio and photos.
 3. Booking Events:
 * Select an event, book a ticket, and receive a PDF and email confirmation.
 4. Voting:
-* Log in to vote for events you’re excited about.
-```
-code blocks for commands
-```
+* Create a profile to vote for events you’re excited about.
 ## Technologies Used
 
 * Frontend: HTML5, MaterializeCss, JavaScript
