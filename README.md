@@ -75,6 +75,12 @@ manage concert-related activities efficiently.
 * Select an event, book a ticket, and receive a PDF and email confirmation.
 4. Voting:
 * Create a profile to vote for events you’re excited about.
+## Visit webpage
+1. Go through the webpage https://giannisdiskakis.pythonanywhere.com/
+2.To understand how the booking system works, you can use one of the following test card details:
+* (Test Card 1:First Name: first_one Last Name: last_one Card Number: 12345678 CVC: 123 Type: Mastercard)
+* (Test Card 2:First Name: first_two Last Name: last_two Card Number: 345678910 CVC: 232 Type:Mastercard).
+These are fake/test cards provided only for demonstration purposes to help you understand the app’s functionality.
 ## Technologies Used
 
 * Frontend: HTML5, MaterializeCss, JavaScript
